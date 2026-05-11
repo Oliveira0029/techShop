@@ -1,0 +1,213 @@
+/* O seletor * é universal, ou seja, aplica as aparências em todos os elementos da página */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:  Arial, sans-serif;
+} /* Estilos gerais do corpo da página */
+body {
+    background: #e4dced93;
+    color: rgb(0, 0, 0);
+}
+
+/* Classe reutilizável para limpar a largura do conteúdo e centralizar na tela */
+.container{
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* Estiliza ao mesmo tempo topo e rodapé, pois os dois tem a mesma aparência*/
+.topo,
+.rodape {
+    background: #9957f69a;
+    color: white;
+    padding: 20px 0;
+}
+
+/* Arupa elementos que precisa do Flexbox para organizar os intens lado a lado*/
+.linha,
+.menu.container,
+.busca,
+.links-topo
+{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+/*Configuraçao especifica da linha principal do cabeçalho*/
+.linha
+{
+    justify-content: space-between;
+}
+
+/* Estilizaçoa da logo do site*/
+.logo
+{
+    font-size: 28px;
+    font-weight: bold;
+    color: rgba(127, 14, 161, 0.942);
+}
+
+/* Área do formulário de busca */
+.busca
+{
+    flex: 1;
+    max-width: 600;
+    gap: 0;
+}
+
+/*Campo de texto da busca */
+.busca input
+{
+    flex: 1;
+    padding: 12px;
+    border: none;
+    border-radius: 4px 0 0 4px;
+}
+
+/* Estilo compartilhado pelos botões reais e links com apar~encia de botão*/
+button,
+.botao
+{
+    background: rgba(97, 1, 133, 0.638);
+    color: white;
+    padding: 12px 20px;
+    font-weight: bold;
+    cursor: pointer;
+    text-decoration: none;
+    border-radius: 6px;
+}
+
+/* Configuração específica do botão */
+.busca button
+{ 
+    border: 0 4px 4px 0;
+}  
+
+/* estilo padrão para todos os links da ágina */
+a
+{
+    color: rgb(255, 253, 253);
+    text-decoration: none;
+}
+
+/* Barra de menu abaixo do cabeçalho */
+.menu
+{
+    background: #be57f679;
+    padding: 12px 0;
+}
+
+/* Banner principal da página*/
+.banner
+{
+    background: linear-gradient(to right, #951cb3d4,#d59af3);
+    color: rgb(68, 5, 87);
+    padding: 60px 0;
+    margin-bottom: 40px;
+}
+
+/* Título principal dentro do banner*/
+.banner h1
+{
+    font-size: 42px;
+    margin-bottom: 25px;
+}
+
+/* Parágrafo do banner*/
+.banner p
+{
+    font-size: 18px;
+    margin-bottom: 25px;
+}
+
+/* Título secundários das sessõs */
+h2
+{
+    margin: 35px 0 20px;
+}
+
+/* Classe geral para elementos organizados em grade */
+.grade
+{
+    display: grid;
+    gap: 20px;
+}
+
+/* Grade espercífica das categoria */
+.categorias
+{
+    grid-template-columns: repeat(auto-fit,minmax(150px,1fr));
+}
+
+/* Aparência compartilhada entre cada categoria e os cards do produto*/
+.categorias div,
+.card
+{
+    background: rgba(205, 157, 250, 0.799);
+    border-radius: 10px;
+    padding: 18px;
+    box-shadow: 0 2px 8px #0001;
+}
+
+/* Ajusres especificos dos itens da categoria */
+.categorias div
+{
+    text-align: center;
+    font-weight: bold;
+}
+
+/* Grade específica dos produtos */
+.produtos
+{
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+/*  Crad individual do produto*/
+.card
+{
+    display: flex;
+    flex-direction: column;
+    transition: 0.2s;
+}
+
+/* efeito visual quando o mouse passa por cima do card*/
+.card:hover
+{
+    transform: translateY(5px);
+}
+
+/* imagem dentro do cartão */
+{
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+/* Paragráfo de descrição dentro do card */
+.card p
+{
+    margin: 10px 0;
+}
+
+/* Preço do produto */
+.card strong
+{
+    color:#8303a2;
+    font-size: 22px;
+    margin-bottom: 15px;
+}
+/* Botão que fica dentro da card*/
+.card button
+{
+    margin-top: auto;
+}
+
+/* Ajustes finais no rodapé*/
+.rodape
+{
+    text-align: center;
+    margin-top: 40px;
+}
